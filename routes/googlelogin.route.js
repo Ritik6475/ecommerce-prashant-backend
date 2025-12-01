@@ -6,15 +6,19 @@ import { OAuth2Client } from "google-auth-library";
 const router = express.Router();
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
-// -------------------------------------------
-// GOOGLE LOGIN USING SECURE HTTP-ONLY COOKIES
-// -------------------------------------------
+const isProd = process.env.NODE_ENV === "production";
+
+const cookieOptions = {
+  httpOnly: true,
+  secure: isProd,
+  sameSite: isProd ? "none" : "lax",
+  maxAge: 7 * 24 * 60 * 60 * 1000,
+};
 
 router.post("/googlelogin", async (req, res) => {
   try {
     const { token } = req.body;
 
-    // Verify Google token
     const ticket = await client.verifyIdToken({
       idToken: token,
       audience: process.env.GOOGLE_CLIENT_ID,
@@ -35,22 +39,13 @@ router.post("/googlelogin", async (req, res) => {
       });
     }
 
-    // Create JWT for our app
     const appToken = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
       expiresIn: "7d",
     });
 
-    // ----------------------------------------------------------
-    // SET TOKEN AS SECURE HTTP-ONLY COOKIE
-    // ----------------------------------------------------------
-   res.cookie("token", appToken, {
-  httpOnly: true,
-  secure: false,          // IMPORTANT for localhost
-  sameSite: "lax",        // SAME as normal login
-  maxAge: 7 * 24 * 60 * 60 * 1000,
-});
+    // ✔ Set secure cookie
+    res.cookie("token", appToken, cookieOptions);
 
-    // Send user info (NO TOKEN)
     res.json({
       success: true,
       user,

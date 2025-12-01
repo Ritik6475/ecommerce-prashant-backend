@@ -7,12 +7,16 @@ import { protect } from '../middleware/auth.js';
 
 const router = express.Router();
 
+const isProd = process.env.NODE_ENV === "production";
+
+
 const cookieOptions = {
-    httpOnly: true,
-  secure: false,     // important: false for localhost
-  sameSite: "lax",   // lax works for localhost without https
-  maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+  httpOnly: true,
+  secure: isProd,            // ONLY true on production
+  sameSite: isProd ? "none" : "lax",
+  maxAge: 7 * 24 * 60 * 60 * 1000,
 };
+
 
 // Generate JWT Token
 const generateToken = (id) => {
