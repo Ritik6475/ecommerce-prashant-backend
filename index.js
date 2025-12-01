@@ -28,13 +28,25 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // ✅ CORS must be applied before routes and before any catch-all 404
+
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://ecommerce-prashaant-rv6k.vercel.app'
+];
+
 const corsOptions = {
-  origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("CORS Not Allowed"));
+    }
+  },
   credentials: true,
   methods: ['GET','POST','PUT','DELETE','PATCH','OPTIONS'],
   allowedHeaders: ['Content-Type','Authorization','X-Admin-Secret'],
-  optionsSuccessStatus: 200,
 };
+
 app.use(cors(corsOptions));
 // handle preflight for all routes
 app.options('*', cors(corsOptions));
