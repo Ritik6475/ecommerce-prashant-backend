@@ -88,7 +88,7 @@
   app.use("/api/search", searchRoutes);
   app.use("/api/googleauth", googleauthRoutes);
   app.use("/api/googlelogin", googleloginRoutes);
-  app.use("/api", tryOnRoutes);
+  app.use("/api/tryon", tryOnRoutes);
 
 
   // Health check
