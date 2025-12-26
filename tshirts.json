@@ -1,0 +1,134 @@
+[
+  {
+    "name": "Classic Black Solid T-Shirt",
+    "brand": "UrbanWear",
+    "images": [
+      "https://sc04.alicdn.com/kf/H86730bc3398d45c08bdcc16bd2b1629aE.jpg"
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Black"],
+    "description": "Premium black solid t-shirt designed for everyday comfort and durability.",
+    "materials": ["100% Cotton"],
+    "gender": "Men",
+    "category": "Clothing",
+    "subcategory": "T-Shirts",
+    "occasion": "Casual",
+    "price": 999,
+    "offerprice": 699,
+    "discountPrice": 300,
+    "rating": 4.4,
+    "reviewCount": 112,
+    "stock": 150,
+    "styleType": "solid",
+    "fit": "Regular Fit",
+    "sleeve": "Half Sleeve",
+    "neck": "Round Neck",
+    "colorVariants": [
+      {
+        "color": "Black",
+        "images": [
+          "https://sc04.alicdn.com/kf/H86730bc3398d45c08bdcc16bd2b1629aE.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Plain White Cotton T-Shirt",
+    "brand": "DailyBasics",
+    "images": [
+      "https://tiimg.tistatic.com/fp/1/009/348/plain-t-shirt-642.jpg"
+    ],
+    "sizes": ["M", "L", "XL", "XXL"],
+    "colors": ["White"],
+    "description": "Soft plain white cotton t-shirt suitable for daily wear and layering.",
+    "materials": ["Combed Cotton"],
+    "gender": "Unisex",
+    "category": "Clothing",
+    "subcategory": "T-Shirts",
+    "occasion": "Daily Wear",
+    "price": 799,
+    "offerprice": 549,
+    "discountPrice": 250,
+    "rating": 4.2,
+    "reviewCount": 86,
+    "stock": 200,
+    "styleType": "solid",
+    "fit": "Slim Fit",
+    "sleeve": "Half Sleeve",
+    "neck": "Crew Neck",
+    "colorVariants": [
+      {
+        "color": "White",
+        "images": [
+          "https://tiimg.tistatic.com/fp/1/009/348/plain-t-shirt-642.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Solid Grey Casual T-Shirt",
+    "brand": "StreetCore",
+    "images": [
+      "https://5.imimg.com/data5/MA/HH/TV/SELLER-55585817/solid-tshirt.jpg"
+    ],
+    "sizes": ["S", "M", "L"],
+    "colors": ["Grey"],
+    "description": "Comfortable solid grey t-shirt with breathable fabric for casual use.",
+    "materials": ["Cotton Blend"],
+    "gender": "Men",
+    "category": "Clothing",
+    "subcategory": "T-Shirts",
+    "occasion": "Casual",
+    "price": 899,
+    "offerprice": 629,
+    "discountPrice": 270,
+    "rating": 4.3,
+    "reviewCount": 64,
+    "stock": 120,
+    "styleType": "solid",
+    "fit": "Relaxed Fit",
+    "sleeve": "Half Sleeve",
+    "neck": "Round Neck",
+    "colorVariants": [
+      {
+        "color": "Grey",
+        "images": [
+          "https://5.imimg.com/data5/MA/HH/TV/SELLER-55585817/solid-tshirt.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Olive Green Premium T-Shirt",
+    "brand": "ModernFit",
+    "images": [
+      "https://i.pinimg.com/236x/2b/3c/2e/2b3c2efd52927e4db1908667cb6a6469.jpg"
+    ],
+    "sizes": ["M", "L", "XL"],
+    "colors": ["Olive Green"],
+    "description": "Premium olive green t-shirt with a tailored fit and smooth fabric finish.",
+    "materials": ["Organic Cotton"],
+    "gender": "Men",
+    "category": "Clothing",
+    "subcategory": "T-Shirts",
+    "occasion": "Smart Casual",
+    "price": 1299,
+    "offerprice": 899,
+    "discountPrice": 400,
+    "rating": 4.6,
+    "reviewCount": 143,
+    "stock": 90,
+    "styleType": "solid",
+    "fit": "Tailored Fit",
+    "sleeve": "Half Sleeve",
+    "neck": "Round Neck",
+    "colorVariants": [
+      {
+        "color": "Olive Green",
+        "images": [
+          "https://i.pinimg.com/236x/2b/3c/2e/2b3c2efd52927e4db1908667cb6a6469.jpg"
+        ]
+      }
+    ]
+  }
+]

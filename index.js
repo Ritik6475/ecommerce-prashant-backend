@@ -22,6 +22,11 @@
   import searchRoutes from './routes/search.routes.js';
   import googleauthRoutes from './routes/googleauth.route.js';
   import googleloginRoutes from './routes/googlelogin.route.js';
+  import tryOnRoutes from "./routes/tryon.routes.js";
+
+
+  
+
   // ...existing code...
   dotenv.config();
   const app = express();
@@ -83,6 +88,8 @@
   app.use("/api/search", searchRoutes);
   app.use("/api/googleauth", googleauthRoutes);
   app.use("/api/googlelogin", googleloginRoutes);
+  app.use("/api", tryOnRoutes);
+
 
   // Health check
   app.get('/api/health', (req, res) => {
@@ -90,6 +97,7 @@
   });
 
   // 404 — must be after routes
+
   app.all("*", (req, res) => {
     res.status(404).json({ message: "Route not found" });
   });
